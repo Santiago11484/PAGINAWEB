@@ -20,15 +20,15 @@ namespace PAGINAWEB
             {
                 await db.Database.EnsureCreatedAsync();
 
-                var usuario1 = new Usuario()
+                /*var usuario1 = new Usuario()
                 {
                     Id = 1,
                     Name = "pepe",
                     Surname = "papa"
                 };
-                db.Usuarios.Add(usuario1);
+                db.Usuarios.Add(usuario1);*/
 
-                await db.SaveChangesAsync();
+               await db.SaveChangesAsync();
             }
 
             CreateHostBuilder(args).Build().Run();
