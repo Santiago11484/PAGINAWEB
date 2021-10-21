@@ -20,13 +20,13 @@ namespace PAGINAWEB
             {
                 await db.Database.EnsureCreatedAsync();
 
-                var usuario1 = new Usuario()
+                /*var usuario1 = new Usuario()
                 {
-                    Id = 1,
+                    UserIdId = 1,
                     Name = "pepe",
                     Surname = "papa"
                 };
-                db.Usuarios.Add(usuario1);
+                db.Usuarios.Add(usuario1);*/
 
                 await db.SaveChangesAsync();
             }
@@ -45,14 +45,24 @@ namespace PAGINAWEB
 
         public class Usuario
         {
-            public int Id { get; set; }
+            public int UserId { get; set; }
             public string Name { get; set; }
             public string Surname { get; set; }
         }
 
+        public class Menu
+        {
+            public int MenuId { get; set; }
+            public string Nombreitem { get; set; }
+            public string Descripcion { get; set; }
+            public int Precio { get; set; }
+            public string Tipo { get; set; }
+        }
+
         public class DatabaseDBContext : DbContext
         {
-            public DbSet<Usuario> Usuarios { get; set; }
+            /*public DbSet<Usuario> Usuarios { get; set; }
+            public DbSet<Menu> Menu { get; set; }*/
 
             protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
             {
@@ -69,7 +79,14 @@ namespace PAGINAWEB
                 modelBuilder.Entity<Usuario>().ToTable("Usuarios");
                 modelBuilder.Entity<Usuario>(entity =>
                 {
-                    entity.HasKey(e => e.Id);
+                    entity.HasKey(e => e.UserId);
+                });
+                base.OnModelCreating(modelBuilder);
+
+                modelBuilder.Entity<Menu>().ToTable("Menu");
+                modelBuilder.Entity<Menu>(entity =>
+                {
+                    entity.HasKey(e => e.MenuId);
                 });
                 base.OnModelCreating(modelBuilder);
             }
