@@ -2,7 +2,182 @@
     ViewData["Title"] = "Home Page";
 }
 
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Burger Company</title>
+    <!--<link href="StyleSheet.css" rel="stylesheet">-->
+    <link href="css/site.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <header id="burgerCompany">
+            <div class="row">
+                <div class="col-12">
+                    <!--NAVBAR-->
+                    <ul class="navbar">
+                        <li style="letter-spacing:2px; font-weight: 700;"><a href="#burgerCompany">Burger Company</a></li>
+                        <li><a href="#rowMenu">Menú</a></li>
+                        <li><a href="#promos">Promociones</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="CrearCuenta" asp-action="signup">Registrarse</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Access" asp-action="Login">Ingresar</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <section>
+            <h2 class="text-center titulo">
+                Bienvenido a The Burger Company
+            </h2>
+            <!--CAROUSEL-->
+            <div class="pic-ctn text-center">
+                <img src="https://d1uz88p17r663j.cloudfront.net/original/bdac88d2b4d50e34c11b0e4c156c492b_Hamburguesa_con_queso.jpg" alt="foto del local de palermo soho" class="pic">
+                <img src="https://d1uz88p17r663j.cloudfront.net/original/bdac88d2b4d50e34c11b0e4c156c492b_Hamburguesa_con_queso.jpg" alt="foto de clientes felices" class="pic">
+            </div>
+        </section>
+        <!--SECTION MENU-->
+        <section id="menu">
+            <h2 class="text-center titulo">Menú</h2>
+            <div class="rowMenu">
+                <div class="col-4">
+                    <img alt="Imagen de Hamburguesa de panceta y queso" src="https://d1uz88p17r663j.cloudfront.net/original/bdac88d2b4d50e34c11b0e4c156c492b_Hamburguesa_con_queso.jpg" class="imagen">
+                    <h2>Bacon Cheese Burger</h2>
+                    <p>Hamburguesa de panceta y queso.</p>
+                    <span class="badge">Precio: 180$</span>
+                </div>
+                <div class="col-4">
+                    <img alt="Imagen de hamburguesa de queso azul" src="https://d1uz88p17r663j.cloudfront.net/original/bdac88d2b4d50e34c11b0e4c156c492b_Hamburguesa_con_queso.jpg" class="imagen">
+                    <h2>Blue Burger</h2>
+                    <p>Hamburguesa de queso azul.</p>
+                    <span class="badge">Precio: 200$</span>
+                </div>
+                <div class="col-4">
+                    <img alt="Imagen de hamburguesa de queso" src="https://d1uz88p17r663j.cloudfront.net/original/bdac88d2b4d50e34c11b0e4c156c492b_Hamburguesa_con_queso.jpg" class="imagen">
+                    <h2>Cheese Burger</h2>
+                    <p>Hamburguesa de queso.</p>
+                    <span class="badge">Precio: 150$</span>
+                </div>
+            </div>
+            <div class="rowMenu">
+                <div class="col-4">
+                    <img alt="Imagen de hamburguesa de pollo" src="https://d1uz88p17r663j.cloudfront.net/original/bdac88d2b4d50e34c11b0e4c156c492b_Hamburguesa_con_queso.jpg" class="imagen">
+                    <h2>Chicken Burger</h2>
+                    <p>Hamburguesa de pollo.</p>
+                    <span class="badge">Precio 180$</span>
+                </div>
+                <div class="col-4">
+                    <img alt="Imagen de hamburguesa de carne y huevo" src="https://d1uz88p17r663j.cloudfront.net/original/bdac88d2b4d50e34c11b0e4c156c492b_Hamburguesa_con_queso.jpg" class="imagen">
+                    <h2>Eggsplotion</h2>
+                    <p>Hamburguesa de carne y huevo.</p>
+                    <span class="badge">Precio 160$</span>
+                </div>
+                <div class="col-4">
+                    <img alt="Imagen de hamburguesa libre de gluten" src="https://d1uz88p17r663j.cloudfront.net/original/bdac88d2b4d50e34c11b0e4c156c492b_Hamburguesa_con_queso.jpg" class="imagen">
+                    <h2>Gluten Free Burger</h2>
+                    <p> Hamburguesa libre de gluten.</p>
+                    <span class="badge">Precio 200$</span>
+                </div>
+            </div>
+            <div class="rowMenu">
+                <div class="col-4">
+                    <img alt="Imagen de hamburguesa de carne con manteca" src="https://d1uz88p17r663j.cloudfront.net/original/bdac88d2b4d50e34c11b0e4c156c492b_Hamburguesa_con_queso.jpg" class="imagen">
+                    <h2>Kid Co Burger</h2>
+                    <p>Hamburguesa con manteca.</p>
+                    <span class="badge">Precio 170$</span>
+                </div>
+                <div class="col-4">
+                    <img alt="Imagen de hamburguesa de salmon" src="https://d1uz88p17r663j.cloudfront.net/original/bdac88d2b4d50e34c11b0e4c156c492b_Hamburguesa_con_queso.jpg" class="imagen">
+                    <h2>Salmon Burger</h2>
+                    <p>Hamburguesa de Salmon.</p>
+                    <span class="badge">Precio: 220$</span>
+                </div>
+                <div class="col-4">
+                    <img alt="Imagen de hamburguesa vegetariana" src="https://d1uz88p17r663j.cloudfront.net/original/bdac88d2b4d50e34c11b0e4c156c492b_Hamburguesa_con_queso.jpg" class="imagen">
+                    <h2>Veggie Burger</h2>
+                    <p>Hamburguesa veggie.</p>
+                    <span class="badge">Precio: 160$</span>
+                </div>
+            </div>
+            <div class="rowMenu">
+                <div class="col-4">
+                    <img alt="Imagen de una porción de papas fritas" src="https://d1uz88p17r663j.cloudfront.net/original/bdac88d2b4d50e34c11b0e4c156c492b_Hamburguesa_con_queso.jpg" class="imagen">
+                    <h2>Krisspy Fries</h2>
+                    <p>Papas fritas clásicas.</p>
+                    <span class="badge">Precio: 110$</span>
+                </div>
+                <div class="col-4">
+                    <img alt="Imagen de una porción de batatas fritas" src="https://d1uz88p17r663j.cloudfront.net/original/bdac88d2b4d50e34c11b0e4c156c492b_Hamburguesa_con_queso.jpg" class="imagen">
+                    <h2>Sweet Fries</h2>
+                    <p>Batatas fritas clásicas.</p>
+                    <span class="badge">Precio: 120$</span>
+                </div>
+                <div class="col-4">
+                    <img alt="Imagen de una porción de papas fritas con queso cheddar" src="https://d1uz88p17r663j.cloudfront.net/original/bdac88d2b4d50e34c11b0e4c156c492b_Hamburguesa_con_queso.jpg" class="imagen">
+                    <h2>Chezzy Fries</h2>
+                    <p>Papas fritas con queso Cheddar.</p>
+                    <span class="badge">Precio: 150$</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="promos">
+            <h2 class="text-center titulo">Promociones</h2>
+            <div class="rowMenu">
+                <div class="col-4 ">
+                    <h2>Promoción Extra</h2>
+                    <p>2 Bacon Cheese Burgers + 2 Chezzy Fries.</p>
+                    <span class="badge">Precio: $620</span>
+                </div>
+                <div class="col-4">
+                    <h2>Promoción Veggie</h2>
+                    <p>2 Veggie Burgers + 2 Krisspy Fries.</p>
+                    <span class="badge">Precio: $500</span>
+                </div>
+                <div class="col-4">
+                    <h2> Promoción Explotion</h2>
+                    <p>2 Eggsplotion Burgers + 2 Sweet Fries.</p>
+                    <span class="badge">Precio: $500</span>
+                </div>
+            </div>
+
+
+        </section>
+        <footer id="contacto">
+            <h2 class="text-center titulo">Contacto</h2>
+            <div class="row footer">
+                <div>
+                    <img src="img/facebook.png" alt="logo de facebook" width="50">
+                    <p>The Burger Company</p>
+                </div>
+                <div>
+                    <img src="img/instagram.png" alt="logo de instagram" width="50">
+                    <p>TheBurgerCompany</p>
+                </div>
+                <div>
+                    <img src="img/delivery.png" alt="icono de delivery" width="50">
+                    <small class="text-center"><strong>Rappi</strong></small>
+                    <p>The Burger Company</p>
+                </div>
+            </div>
+            <section class="text-center copyright"><small>CopyRight 2021</small></section>
+        </footer>
+    </div>
+</body>
+
+
+<!--
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+-->
